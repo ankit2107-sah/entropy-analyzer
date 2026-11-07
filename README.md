@@ -1,6 +1,6 @@
 # Text/Code Complexity & Security Analyzer (Shannon Entropy)
 
-A Streamlit-based application to analyze character-level Shannon entropy, calculate probability gradients, scan for sensitive patterns (PII, credentials, API keys), and inspect code complexity metrics.
+A Streamlit-based application to analyze character-level Shannon entropy, calculate probability gradients, ynthetic_egov_large.csv   # created by the generator; not committed , and inspect code complexity metrics.
 
 ---
 
@@ -59,7 +59,7 @@ Open your browser and navigate to:
 ## Features
 - **Entropy Analysis:** Computes per-character frequency, probability $p$, Shannon entropy $H$, and qualitative band (Low / Moderate / High).
 - **Calculus & Curves:** Plots contribution curve $h(p) = -p \log_2 p$, estimates central-difference gradient $\frac{dh}{dp}$, and calculates trapezoidal area.
-- **Pattern & Security Scan:** Heuristically detects emails, phone numbers, Aadhaar numbers, passwords, API tokens, and private keys with automated masking.
+- **Pattern & Security Scan:** Heuristically flags possible emails, phone numbers, Aadhaar numbers, passwords, API tokens, and private keys with automated masking.
 - **Code Metrics:** Cyclomatic complexity (AST-based for Python, regex-based for others), line counts, and comment estimation.
 - **Exporting:** Download text audit reports and character frequency CSVs.
 
