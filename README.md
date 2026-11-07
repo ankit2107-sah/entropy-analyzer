@@ -62,3 +62,9 @@ Open your browser and navigate to:
 - **Pattern & Security Scan:** Heuristically detects emails, phone numbers, Aadhaar numbers, passwords, API tokens, and private keys with automated masking.
 - **Code Metrics:** Cyclomatic complexity (AST-based for Python, regex-based for others), line counts, and comment estimation.
 - **Exporting:** Download text audit reports and character frequency CSVs.
+
+## Limitations
+- Entropy measures character distribution only. It does not prove a file is encrypted, compressed, or malicious.
+- Pattern matches can be false positives (for example, a 12-digit number) or miss real secrets.
+- The risk score is a heuristic for triage, not a certified security rating.
+- Use synthetic or public data only. Never upload real credentials or personal identifiers.
