@@ -1,0 +1,11 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+
+# Large synthetic sample data files
+samples/*.csv

@@ -1,0 +1,7 @@
+2026-11-07 10:14:22 INFO [auth_service] User login attempted for user=admin01 email=admin@portal.gov.in
+2026-11-07 10:14:23 INFO [auth_service] OTP sent to registered phone +91 9876543210
+2026-11-07 10:14:45 INFO [auth_service] OTP verification successful for citizen with Aadhaar 5432 9876 1234
+2026-11-07 10:15:02 WARN [debug_logger] Temporary session credentials created: password=Passw0rd_Admin!#2026
+2026-11-07 10:15:10 INFO [api_gateway] Service access granted: api_key=ak_live_89f72b9a7c3e410d8a556bc9e31d40fe
+2026-11-07 10:16:01 INFO [file_upload] Uploaded payload checksum sha256: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4f8db9941a87e221f42289c89e
+2026-11-07 10:17:15 INFO [session_worker] Session closed gracefully.
