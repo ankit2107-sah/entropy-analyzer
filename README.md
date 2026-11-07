@@ -54,6 +54,33 @@ streamlit run app.py
 Open your browser and navigate to:
 **http://localhost:8501**
 
+# How to Use
+1. **Provide input** using one of three options:
+   - Paste text into the text box.
+   - Upload a TXT, LOG, PY, C, H, CPP, JAVA, JS, TS, CSV, HTML, or JSON file. Files are read as UTF-8 text and are never executed.
+   - Choose a built-in sample from the dropdown and click **Use sample**.
+2. Click **Analyse input**.
+3. Review the result tabs:
+   - **Frequency:** most common characters and the probability table.
+   - **Contribution curve:** the plot of p against h(p).
+   - **Calculus:** gradient statistics and trapezoidal area.
+   - **Security scan:** risk score, label, and masked findings.
+   - **Code metrics:** line, function, and complexity figures.
+4. Download the **TXT report** and **character CSV** if you need them.
+---
+
+## Generating Large Synthetic Test Data
+
+To test with a large file, run:
+
+```bash
+python make_synthetic_data.py 500000
+```
+
+This writes about 500,000 fake e-governance records to `samples/synthetic_egov_large.csv` (roughly 50–60 MB). The script uses a fixed random seed (42), so the output is the same on every run. All names, emails (`example.com`), and IDs are invented.
+
+Large files can slow the browser because the whole file is loaded into the text box. If the page becomes slow, generate a smaller file, for example `python make_synthetic_data.py 100000`.
+
 ---
 
 ## Features
@@ -68,3 +95,29 @@ Open your browser and navigate to:
 - Pattern matches can be false positives (for example, a 12-digit number) or miss real secrets.
 - The risk score is a heuristic for triage, not a certified security rating.
 - Use synthetic or public data only. Never upload real credentials or personal identifiers.
+- 
+## Safe Data Use
+
+- Use only synthetic data, sample files, or public datasets.
+- Never upload real passwords, API keys, private keys, Aadhaar numbers, or other personal identifiers.
+- Review any output before sharing it.
+
+---
+
+## Troubleshooting
+
+- **`python` not found:** Install Python from python.org and tick "Add python.exe to PATH".
+- **`No module named streamlit`:** Activate `.venv` and run `python -m pip install -r requirements.txt` from the project folder.
+- **Page does not open:** Keep the terminal running, use `http://localhost:8501`, or try `python -m streamlit run app.py --server.port 8502`.
+
+---
+
+## Acknowledgements
+
+Developed as part of Project 4.2 (Text/Code Complexity & Security Vulnerability Analyzer Using Shannon Entropy), SRM Institute of Science and Technology, Ramapuram. Supervised by Mr. Johnty Rodes L.
+
+---
+
+## License
+
+For academic use. Add a license file if you plan to reuse or distribute the code.
